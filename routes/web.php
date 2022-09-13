@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,8 +15,12 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::redirect('/', '/home');
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::controller(UserController::class)->group(function () {
+  Route::get('/users/{user}/edit', 'edit');
+  Route::put('/users/{user}', 'update');
+  Route::delete('/users/{user}', 'destroy');
+});
