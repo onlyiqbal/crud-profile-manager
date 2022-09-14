@@ -11,8 +11,8 @@
                 <p class="lead">Semua ini adalah member yang terdaftar pada website blog atau profile manager!</p>
 
                 {{-- FLASH MESSAGE --}}
-                @if (session()->has('error')) 
-                    @if (session()->get() == 'update')
+                @if (session()->has('pesan')) 
+                    @if (session()->get('pesan') == 'update')
                         <div class="alert alert-success alert-dismissible w-50 mx-auto fade show">
                             Data <b>{{session()->get('nama')}}</b> berhasil di update
                             <button type="button" class="btn-close" data-bs-dismiss="alert">

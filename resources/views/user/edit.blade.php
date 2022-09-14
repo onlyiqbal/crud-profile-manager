@@ -20,8 +20,8 @@
       <div class="col-lg-8">
         <h1>Edit Data</h1>
         <hr>
-        <form action="{{ url('/users/'.$user->id) }}" enctype="multipart/form-data">
-          @method('put')
+        <form action="{{ url('/users/'.$user->id) }}" enctype="multipart/form-data" method="POST">
+          @method('PUT')
           @include('layouts.form', ['tombol' => 'Update'])
         </form>
       </div>

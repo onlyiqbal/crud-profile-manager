@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::controller(UserController::class)->group(function () {
-  Route::get('/users/{user}/edit', 'edit');
-  Route::put('/users/{user}', 'update');
-  Route::delete('/users/{user}', 'destroy');
+  Route::get('/users/{user}/edit', 'edit')->middleware('can:update,user');
+  Route::put('/users/{user}', 'update')->middleware('can:update,user');
+  Route::delete('/users/{user}', 'destroy')->middleware('can:update,user');
 });
