@@ -1,6 +1,79 @@
 @extends('layouts.app')
 
 @section('content')
+<header id="main-slide">
+<div id="mySlide" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#mySlide" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#mySlide" data-bs-slide-to="1"></li>
+    <li data-bs-target="#mySlide" data-bs-slide-to="2"></li>
+    <li data-bs-target="#mySlide" data-bs-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner text-white">
+    <div class="carousel-item active" id="slide1">
+      <div class="container">
+        <div class="d-none d-md-block">
+          <h1 class="display-1 bg-info px-4 pb-2 d-inline-block">
+            Get<strong> Inspired</strong>
+          </h1>
+          <br>
+          <p class="bg-dark px-2 pb-1 d-inline-block">Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit. Aut cumque molestias asperiores
+            ipsam officiis? Doloremque.</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item" id="slide2">
+      <div class="container">
+        <div class="d-none d-md-block text-end">
+          <h1 class="display-1 bg-dark px-4 pb-2 d-inline-block">
+            Take<strong> Action</strong>
+          </h1>
+          <br>
+          <p class="bg-info px-2 pb-1 d-inline-block">Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit. Aut cumque molestias asperiores
+            ipsam officiis? Doloremque.</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item" id="slide3">
+      <div class="container">
+        <div class="d-none d-md-block">
+          <h1 class="display-1 bg-info px-4 pb-2 d-inline-block">
+            Be<strong> Social</strong>
+          </h1>
+          <br>
+          <p class="bg-dark px-2 pb-1 d-inline-block">Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit. Aut cumque molestias asperiores
+            ipsam officiis? Doloremque.</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item" id="slide4">
+      <div class="container">
+        <div class="d-none d-md-block text-end">
+          <h1 class="display-1 bg-dark px-4 pb-2 d-inline-block">
+            Find<strong> Stories</strong>
+          </h1>
+          <br>
+          <p class="bg-info px-2 pb-1 d-inline-block">Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit. Aut cumque molestias asperiores
+            ipsam officiis? Doloremque.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#mySlide" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#mySlide" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</header>
+
 {{-- MEMBER LIST --}}
 <section id="member-list" class="py-5 bg-light text-center">
     <div class="container">

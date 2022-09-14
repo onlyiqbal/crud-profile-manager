@@ -26,3 +26,17 @@ if (pilihanBg) {
     inputBg.value = this.children[0].innerHTML;
   }
 }
+
+// Kode untuk mengisi atribut action dari tag form untuk delete user
+
+let bntHapus = document.getElementsByClassName('btn-hapus');
+let formDelete = document.getElementById('deleteForm');
+
+if (bntHapus) {
+  [...bntHapus].forEach(element => element.addEventListener('click', inputId));
+
+  function inputId() {
+    let idHapus = this.getAttribute('data-id');
+    formDelete.setAttribute('action', '/users/' + idHapus);
+  }
+}
