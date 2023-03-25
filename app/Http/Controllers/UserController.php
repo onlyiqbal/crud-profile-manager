@@ -45,7 +45,7 @@ class UserController extends Controller
 
             $request->gambar_profil->storeAs('public/uploads', $namaFile);
         } else {
-            $namaFile = $request->gambar_profil;
+            $namaFile = $user->gambar_profil;
         }
 
         $validateData['gambar_profil'] = $namaFile;
