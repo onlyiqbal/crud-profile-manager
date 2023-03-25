@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -50,7 +49,10 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        $tanggal_lahir = $data['thn'] . str_pad($data['bln'], 2, 0, STR_PAD_LEFT) . str_pad($data['tgl'], 2, 0, STR_PAD_LEFT);
+        // Satukan ketiga komponen tanggal
+        $tanggal_lahir = $data["thn"] . str_pad($data["bln"], 2, 0, STR_PAD_LEFT) .
+            str_pad($data["tgl"], 2, 0, STR_PAD_LEFT);
+        // Input kedalam array $data agar $tanggal_lahir bisa ikut di validasi
         $data['tanggal_lahir'] = $tanggal_lahir;
 
         return Validator::make($data, [

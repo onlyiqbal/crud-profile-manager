@@ -19,7 +19,8 @@
             <div class="col-lg-8">
                 <h1>Form Pedaftaran</h1>
                 <hr>
-                <form action="{{ route('register') }}" method="POST" enctype="multipart/form-data">@include('layouts.form', ['tombol' => 'Daftar'])</form>
+                <form action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
+                    @include('layouts.form', ['tombol' => 'Daftar'])</form>
             </div>
         </div>
     </div>
